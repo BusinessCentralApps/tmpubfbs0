@@ -1,0 +1,8 @@
+{
+  "powerPlatformSolutionFolder": "WarehouseHelper",
+  "type": "PTE",
+  "templateUrl": "https://github.com/Microsoft/al-go-pte@preview",
+  "runs-on": "ubuntu-latest",
+  "shell": "pwsh",
+  "MicrosoftTelemetryConnectionString": ""
+}
