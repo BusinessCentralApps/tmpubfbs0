@@ -9,12 +9,12 @@ on:
         default: false
 
 permissions:
-  contents: read
   actions: read
+  contents: read
 
 defaults:
   run:
-    shell: pwsh
+    shell: powershell
 
 env:
   ALGoOrgSettings: ${{ vars.ALGoOrgSettings }}
@@ -22,16 +22,16 @@ env:
 
 jobs:
   Troubleshooting:
-    runs-on: [ ubuntu-latest ]
+    runs-on: [ windows-latest ]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           lfs: true
 
       - name: Troubleshooting
-        uses: microsoft/AL-Go/Actions/Troubleshooting@6a9ef0c91e5b54d0fd3abb3d4495417a1db28f17
+        uses: businesscentralapps/tmpN6sxaC-Actions/Troubleshooting@main
         with:
-          shell: pwsh
+          shell: powershell
           gitHubSecrets: ${{ toJson(secrets) }}
           displayNameOfSecrets: ${{ github.event.inputs.displayNameOfSecrets }}
